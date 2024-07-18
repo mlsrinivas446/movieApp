@@ -7,6 +7,7 @@ class PopularMovies extends Component {
   state = {
     moviesList: [],
     search: '',
+    pageNo: 1,
   }
 
   componentDidMount() {
@@ -14,12 +15,13 @@ class PopularMovies extends Component {
   }
 
   getMoviesDetails = async () => {
-    const {search} = this.state
+    const {search, pageNo} = this.state
+    console.log(pageNo)
     const apiKey = '3f06047eaef37387d6cf5279f473bae3'
     const isEmpty =
       search === ''
-        ? `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
-        : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${search}&page=1`
+        ? `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${pageNo}`
+        : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${search}&page=${pageNo}`
     const url = isEmpty
     const response = await fetch(url)
 
@@ -53,13 +55,37 @@ class PopularMovies extends Component {
     this.setState({search: movie}, this.getMoviesDetails)
   }
 
+  onNextPageClick = () => {
+    this.setState(
+      prevState => ({
+        pageNo: prevState.pageNo >= 1 ? prevState.pageNo + 1 : 1,
+      }),
+      this.getMoviesDetails,
+    )
+  }
+
+  onPrevPageClick = () => {
+    this.setState(
+      prevState => ({
+        pageNo: prevState.pageNo > 1 ? prevState.pageNo - 1 : 1,
+      }),
+      this.getMoviesDetails,
+    )
+  }
+
   render() {
-    const {moviesList} = this.state
+    const {moviesList, pageNo} = this.state
 
     return (
       <div className="page-view">
         <Header onSearch={this.onSearch} />
-        <ViewComponent moviesList={moviesList} heading="Upcoming" />
+        <ViewComponent
+          moviesList={moviesList}
+          heading="Popular"
+          pageNo={pageNo}
+          onNextPageClick={this.onNextPageClick}
+          onPrevPageClick={this.onPrevPageClick}
+        />
       </div>
     )
   }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import Header from '../Header'
 import './index.css'
 
@@ -107,9 +107,6 @@ class MovieItemDetails extends Component {
                 {Math.round(voteAverage * 10 * 10) / 10}%
               </div>
             </div>
-            <button className="vibe-button" type="button">
-              What's your vibe?
-            </button>
             <div className="actions">
               <button className="play-button" type="button">
                 Play Trailer

@@ -1,0 +1,24 @@
+.page-container {
+  position: absolute;
+  width: 100vw;
+  flex: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #002244;
+}
+
+.movie-heading {
+  font-size: 25px;
+  margin: 10px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.movies-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  align-self: center;
+  flex-wrap: wrap;
+}

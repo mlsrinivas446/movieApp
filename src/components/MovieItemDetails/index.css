@@ -1,0 +1,200 @@
+.detail-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: #002244;
+}
+
+.poster-section {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.poster {
+  width: 100vw;
+  height: 50vh;
+  display: block;
+  border-radius: 7px;
+}
+
+.info-section {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.year {
+  font-size: 18px;
+  color: #777;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.details span {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.user-score {
+  margin-bottom: 20px;
+}
+
+.score-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.vibe-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 0px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.tagline {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.overview h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.overview {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.credits p {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .detail-page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .page-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .poster-section {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .poster {
+    height: 90vh;
+    width: 35vw;
+  }
+
+  .info-section {
+    width: 70%;
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .year {
+    font-size: 24px;
+  }
+
+  .details span {
+    font-size: 18px;
+  }
+
+  .score-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vibe-button {
+    padding: 10px 30px;
+  }
+
+  .action-button {
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .year {
+    font-size: 28px;
+  }
+
+  .details span {
+    font-size: 20px;
+  }
+
+  .score-circle {
+    width: 60px;
+    height: 60px;
+  }
+}

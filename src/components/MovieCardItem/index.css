@@ -1,0 +1,97 @@
+.movie-item-container {
+  width: 80vw;
+  height: 60vh;
+  border-radius: 7px;
+  margin: 10px;
+  box-shadow: 0px 0px 2px 0px grey;
+  list-style-type: none;
+}
+
+.card-poster {
+  height: 40vh;
+  width: 80vw;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.movie-details-container {
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20vh;
+}
+
+.card-title {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.rating {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #ffb400;
+}
+
+@media screen and (min-width: 400px) {
+  .movie-item-container {
+    width: 40vw;
+    height: 63vh;
+  }
+
+  .card-poster {
+    width: 40vw;
+  }
+
+  .movie-details-container {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .movie-item-container {
+    width: 20vw;
+  }
+
+  .card-poster {
+    height: 40vh;
+    width: 20vw;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .movie-details-container {
+    height: 20vh;
+  }
+}
+
+.view-button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  transform: scale(1.05);
+  background-color: #003d80;
+}
+
+@media screen and (max-width: 768px) {
+  .view-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .view-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

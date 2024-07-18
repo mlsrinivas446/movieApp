@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import Header from '../Header'
-import ViewComponent from '../ViewComponent'
+import ReusableComponent from '../ReusableComponent'
 import './index.css'
 
 class TopRatedMovies extends Component {
@@ -75,7 +75,7 @@ class TopRatedMovies extends Component {
     return (
       <div className="page-view">
         <Header onSearch={this.onSearch} />
-        <ViewComponent
+        <ReusableComponent
           moviesList={moviesList}
           pageNo={pageNo}
           heading="Top Rated"

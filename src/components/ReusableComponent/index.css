@@ -1,9 +1,9 @@
 .page-container {
-  position: absolute;
   width: 100vw;
   min-height: 100vh;
-  display: block;
-  flex-direction: column;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-between;
   background-color: #002244;
 }
 
@@ -19,12 +19,12 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  align-self: center;
   flex-wrap: wrap;
 }
 
 .page-nav-button-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   align-self: flex-end;
 }

@@ -1,7 +1,7 @@
 import MovieCardItem from '../MovieCardItem'
 import './index.css'
 
-const ViewComponent = props => {
+const ResuableComponent = props => {
   const {moviesList, heading, onNextPageClick, onPrevPageClick, pageNo} = props
 
   const navToPrevPage = () => {
@@ -33,4 +33,4 @@ const ViewComponent = props => {
   )
 }
 
-export default ViewComponent
+export default ResuableComponent
